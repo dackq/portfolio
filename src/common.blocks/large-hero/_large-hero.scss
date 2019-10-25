@@ -3,6 +3,11 @@
 	background-color: $gray;
 	color: $white;
 
+	&__content {
+		max-width: 64rem;
+		margin: 0px auto;
+	}
+
 	&__title {
 		font-family: montserrat;
 		font-size: 3rem;
