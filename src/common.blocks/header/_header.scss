@@ -1,0 +1,38 @@
+.header {
+	padding: 1px;
+	background-color: $gray;
+
+	&__link {
+		color: $white;
+		text-decoration: none;
+		font-family: montserrat;
+		font-weight: 300;
+
+		&_large {
+			font-size: 2rem;
+		}
+
+		&_align-center {
+			text-align: center;
+		}
+
+		&_align-center-until-small {
+			text-align: center;
+
+			@include small-breakpoint {
+				text-align: left;
+			}
+		}
+
+		&_highlight {
+			color: $blue;
+			font-family: "Fira Sans" sans-serif;
+			font-weight: 700;
+		}
+	}
+
+	&__nav {
+		list-style-type: none;
+		padding: 0px 1rem;
+	}
+}
