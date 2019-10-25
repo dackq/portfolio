@@ -9,34 +9,64 @@
 		/>
 	</head>
 	<body>
-		<div class="large-hero">
-			<h1 class="large-hero__title">
-				Hi, I'm
-				<span class="large-hero__title_highlight">Dakota Reed</span>.
-			</h1>
-			<h2 class="large-hero__subtitle">
-				I am a full&nbsp;stack developer.
-			</h2>
-			<a class="btn" href="#contact">contact me</a>
+		<div
+			id="hero-box"
+			class="large-hero container container_vertical-align"
+		>
+			<div class="container__row">
+				<h1 class="large-hero__title">
+					Hi, I'm
+					<span class="large-hero__title_highlight">Dakota Reed</span
+					>.
+				</h1>
+				<h2 class="large-hero__subtitle">
+					I am a full&nbsp;stack developer.
+				</h2>
+				<a class="btn" href="#contact">contact me</a>
+			</div>
 		</div>
 
-		<header>
-			<nav>
-				<h2>
-					<a href="#hero-box"
-						>Dakota L. Reed<span class="highlight">_</span></a
-					>
-				</h2>
-				<a class="hamburger"><i class="fas fa-bars"></i></a>
-				<ul>
-					<li><a href="#portfolio">Portfolio</a></li>
-					<li><a href="#about">About</a></li>
-					<li>
-						<a href="#contact">Contact</a>
-					</li>
-				</ul>
+		<header class="header">
+			<nav class="container container_vertical-align">
+				<div
+					class="container__column-s-6 container__column-m-8 header__link_align-center-until-small"
+				>
+					<a href="#hero-box" class="header__link header__link_large">
+						Dakota L. Reed<span class="header__title_highlight"
+							>_</span
+						>
+					</a>
+				</div>
+
+				<div class="container__column-s-6 container__column-m-4">
+					<a class="hamburger"><i class="fas fa-bars"></i></a>
+					<ul class="container header__nav">
+						<li
+							class="container__column-xs-4 header__link_align-center"
+						>
+							<a class="header__link" href="#portfolio"
+								>Portfolio</a
+							>
+						</li>
+						<li
+							class="container__column-xs-4 header__link_align-center"
+						>
+							<a
+								class="header__link header_nudge-left"
+								href="#about"
+								>About</a
+							>
+						</li>
+						<li
+							class="container__column-xs-4 header__link_align-center"
+						>
+							<a class="header__link" href="#contact">Contact</a>
+						</li>
+					</ul>
+				</div>
 			</nav>
 		</header>
+
 		<div class="icon-bar">
 			<a href="https://github.com/dackq"><i class="fab fa-github"></i></a>
 			<a href="#" class="twitter"><i></i></a>
@@ -46,7 +76,7 @@
 		</div>
 		<main>
 			<section id="portfolio">
-				<div class="container">
+				<div class="">
 					<h2 class="heading">Take a look at my work!</h2>
 					<p class="info-text">
 						As a ui/ux designer, I strive to create products that
@@ -69,7 +99,11 @@
 				</div>
 			</section>
 			<section id="about">
+<<<<<<< HEAD
 				<div class="container">
+=======
+				<div class="">
+>>>>>>> header
 					<h2 class="heading black">
 						<span class="highlight">|</span> About
 					</h2>

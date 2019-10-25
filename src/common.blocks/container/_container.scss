@@ -1,0 +1,47 @@
+.container {
+	&_vertical-align {
+		align-items: center;
+	}
+
+	display: grid;
+	grid-template-columns: repeat(12, minmax(0, 1fr));
+
+	&_gutters-small > div {
+		grid-gap: 4%;
+	}
+	&_gutters-small > div:last-child {
+		padding-right: 0%;
+	}
+	&_gutters > div {
+		padding-right: 5.3%;
+	}
+	&_gutters > div:last-child {
+		padding-right: 0%;
+	}
+	&_large-gutters > div {
+		padding-right: 10%;
+	}
+	&_large-gutters > div:last-child {
+		padding-right: 0%;
+	}
+
+	&__row {
+		grid-column-end: span 12;
+	}
+}
+
+[class^="container__column-"] {
+	grid-column-end: span 12;
+}
+
+@each $size, $abbr in ($extraSmall, xs), ($small, s), ($medium, m), ($large, l),
+	($extraLarge, xl)
+{
+	@media (min-width: $size) {
+		@for $i from 1 through 12 {
+			.container__column-#{$abbr}-#{$i} {
+				grid-column-end: span $i;
+			}
+		}
+	}
+}
