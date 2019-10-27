@@ -1,0 +1,32 @@
+.page-section {
+	&__content-block {
+		margin: 3.5rem $pageSidePadding;
+
+		p {
+			font-weight: 200;
+			line-height: 2.25rem;
+			font-size: 1.5rem;
+		}
+
+		&_highlight {
+			font-weight: 300;
+		}
+	}
+
+	&__subtitle {
+		text-align: center;
+		color: $blue;
+		font-family: montserrat;
+		font-weight: 500;
+		font-size: 1.75rem;
+		margin: 0.5rem 0rem;
+	}
+
+	&__title {
+		text-align: center;
+		font-family: montserrat;
+		font-weight: 300;
+		font-size: 2.15rem;
+		margin: 0.5rem 0rem;
+	}
+}
