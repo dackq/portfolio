@@ -21,10 +21,10 @@
 			text-align: center;
 		}
 
-		&_align-center-until-small {
+		&_align-center-until-medium {
 			text-align: center;
 
-			@include small-breakpoint {
+			@include medium-breakpoint {
 				text-align: left;
 			}
 		}
