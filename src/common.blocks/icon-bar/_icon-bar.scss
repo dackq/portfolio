@@ -4,9 +4,10 @@
 	transform: translateY(-50%);
 
 	&__content {
-		width: 3.125rem;
+		width: 0rem;
 		overflow: hidden;
 		transition: width 0.5s;
+		box-shadow: 0.1rem 0.1rem 10px -5px $gray;
 	}
 
 	&__icon {
@@ -23,6 +24,7 @@
 
 		&_toggle {
 			background-color: $paleGray;
+			box-shadow: 0.1rem 0.1rem 10px -5px $gray;
 		}
 
 		&_github {

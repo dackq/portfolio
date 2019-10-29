@@ -1,6 +1,11 @@
 .page-section {
 	&__content-block {
-		margin: 3.5rem $pageSidePadding;
+		padding: 3.5rem $pageSidePadding;
+
+		@include small-breakpoint {
+			padding-right: $largePageSidePadding;
+			padding-left: $largePageSidePadding;
+		}
 
 		p {
 			font-weight: 200;

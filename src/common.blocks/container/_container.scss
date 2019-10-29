@@ -34,10 +34,14 @@
 	grid-column-end: span 12;
 }
 
-@each $size, $abbr in ($extraSmall, xs), ($small, s), ($medium, m), ($large, l),
-	($extraLarge, xl)
+@each $size, $abbr, $name in ($extraSmall, xs, "extra-small-breakpoint"),
+	($small, s, "small-breakpoint"), ($medium, m, "medium-breakpoint"),
+	($large, l, "large-breakpoint"), ($extraLarge, xl, "extra-large-breakpoint")
 {
 	@media (min-width: $size) {
+		body:before {
+			content: $name;
+		}
 		@for $i from 1 through 12 {
 			.container__column-#{$abbr}-#{$i} {
 				grid-column-end: span $i;

@@ -2,6 +2,11 @@
 	padding: 1px $pageSidePadding;
 	background-color: $gray;
 
+	@include small-breakpoint {
+		padding-right: $largePageSidePadding;
+		padding-left: $largePageSidePadding;
+	}
+
 	&__link {
 		color: $white;
 		text-decoration: none;

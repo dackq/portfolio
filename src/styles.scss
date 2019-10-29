@@ -3,10 +3,10 @@
 @import "./common.blocks/base/global";
 @import "./common.blocks/base/variables";
 @import "./common.blocks/base/mixins";
+@import "./common.blocks/container/container";
 @import "./common.blocks/large-hero/large-hero";
 @import "./common.blocks/btn/btn";
 @import "./common.blocks/header/header";
-@import "./common.blocks/container/container";
-@import "./common.blocks/page=section/page-section";
+@import "./common.blocks/page-section/page-section";
 @import "./common.blocks/footer/footer.scss";
 @import "./common.blocks/icon-bar/icon-bar.scss";
