@@ -1,0 +1,49 @@
+.icon-bar {
+	position: fixed;
+	top: 50%;
+	transform: translateY(-50%);
+
+	&__content {
+		width: 0;
+		overflow: hidden;
+		transition: width 0.5s;
+	}
+
+	&__icon {
+		text-align: center;
+		font-size: 2.5rem;
+		padding: 0.25rem;
+		display: block;
+		color: $white;
+		background-color: $paleGray;
+
+		&:hover {
+			background-color: $paleBlue;
+		}
+
+		&_toggle {
+			background-color: $paleGray;
+		}
+
+		&_github {
+			background: #24292e;
+			&:hover {
+				background: #555e66;
+			}
+		}
+
+		&_twitter {
+			background: #1da1f2;
+			&:hover {
+				background: #64b3e3;
+			}
+		}
+
+		&_linkedin {
+			background: #0073b1;
+			&:hover {
+				background: #5892b1;
+			}
+		}
+	}
+}

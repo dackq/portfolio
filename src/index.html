@@ -41,7 +41,7 @@
 				</div>
 
 				<div class="container__column-s-6 container__column-m-4">
-					<a class="hamburger"><i class="fas fa-bars"></i></a>
+					<a class="hamburger" hidden><i class="fas fa-bars"></i></a>
 					<ul class="container header__nav">
 						<li
 							class="container__column-xs-4 header__link_align-center"
@@ -70,14 +70,29 @@
 		</header>
 
 		<div class="icon-bar">
-			<a href="https://github.com/dackq"><i class="fab fa-github"></i></a>
-			<a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
-			<a href="https://www.linkedin.com/in/dakota-reed/"
-				><i class="fab fa-linkedin"></i
-			></a>
-			<a href="mailto:dakotalreed@gmail.com"
-				><i class="fas fa-envelope"></i
-			></a>
+			<div class="icon-bar__icon icon-bar__icon_toggle">
+				<i class="fas fa-angle-right"></i>
+			</div>
+			<div class="icon-bar__content" data-open="false">
+				<a
+					href="https://github.com/dackq"
+					class="icon-bar__icon icon-bar__icon_github"
+					><i class="fab fa-github"></i
+				></a>
+				<a
+					href="https://twitter.com"
+					class="icon-bar__icon icon-bar__icon_twitter"
+					><i class="fab fa-twitter"></i
+				></a>
+				<a
+					href="https://www.linkedin.com/in/dakota-reed/"
+					class="icon-bar__icon icon-bar__icon_linkedin"
+					><i class="fab fa-linkedin"></i
+				></a>
+				<a href="mailto:dakotalreed@gmail.com" class="icon-bar__icon"
+					><i class="fas fa-envelope"></i
+				></a>
+			</div>
 		</div>
 
 		<main>
