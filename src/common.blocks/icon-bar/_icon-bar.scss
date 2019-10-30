@@ -12,7 +12,7 @@
 
 	&__icon {
 		text-align: center;
-		font-size: 2.5rem;
+		font-size: 3.5rem;
 		padding: 0.25rem;
 		display: block;
 		color: $white;
@@ -23,6 +23,7 @@
 		}
 
 		&_toggle {
+			font-size: 2.5rem;
 			background-color: $paleGray;
 			box-shadow: 0.1rem 0.1rem 10px -5px $gray;
 		}

@@ -1,0 +1,14 @@
+.projects {
+	&__project-card {
+		display: block;
+		width: $projectCardWidth;
+		height: calc(#{$projectCardWidth} * 1.618);
+		background-color: $paleBlue;
+		margin: 3.5rem auto 0rem auto;
+		border-radius: 0.6rem;
+	}
+
+	&__image {
+		width: 100%;
+	}
+}

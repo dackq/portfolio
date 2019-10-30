@@ -1,11 +1,14 @@
 .page-section {
-	&__content-block {
-		padding: 3.5rem $pageSidePadding;
+	padding: 3.5rem $pageSidePadding 0rem $pageSidePadding;
 
-		@include small-breakpoint {
-			padding-right: $largePageSidePadding;
-			padding-left: $largePageSidePadding;
-		}
+	@include small-breakpoint {
+		padding-right: $largePageSidePadding;
+		padding-left: $largePageSidePadding;
+	}
+
+	&__content-block {
+		max-width: 64rem;
+		margin: 0rem auto;
 
 		p {
 			font-weight: 200;
@@ -21,7 +24,7 @@
 	&__subtitle {
 		text-align: center;
 		color: $blue;
-		font-family: montserrat;
+		font-family: montserrat, sans-serif;
 		font-weight: 500;
 		font-size: 1.75rem;
 		margin: 0.5rem 0rem;
@@ -29,7 +32,7 @@
 
 	&__title {
 		text-align: center;
-		font-family: montserrat;
+		font-family: montserrat, sans-serif;
 		font-weight: 300;
 		font-size: 2.15rem;
 		margin: 0.5rem 0rem;

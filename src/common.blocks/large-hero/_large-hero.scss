@@ -1,11 +1,10 @@
 .large-hero {
-	padding: 10rem $pageSidePadding;
+	padding: 15vh $pageSidePadding;
 	background-color: $gray;
 	color: $white;
 
 	@include small-breakpoint {
-		padding-right: $largePageSidePadding;
-		padding-left: $largePageSidePadding;
+		padding: 15ch $largePageSidePadding;
 	}
 
 	&__content {
@@ -14,7 +13,7 @@
 	}
 
 	&__title {
-		font-family: montserrat;
+		font-family: $titleFontStack;
 		font-size: 3rem;
 		font-weight: 300;
 
@@ -31,7 +30,7 @@
 		}
 	}
 	&__subtitle {
-		font-family: montserrat;
+		font-family: $titleFontStack;
 		font-size: 2.5rem;
 		font-weight: 200;
 		margin: 1rem 0;

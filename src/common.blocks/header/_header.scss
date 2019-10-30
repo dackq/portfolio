@@ -1,5 +1,5 @@
 .header {
-	padding: 1px $pageSidePadding;
+	padding: 1px 0rem;
 	background-color: $gray;
 
 	@include small-breakpoint {
@@ -7,10 +7,15 @@
 		padding-left: $largePageSidePadding;
 	}
 
+	&__content {
+		max-width: 64rem;
+		margin: 0rem auto;
+	}
+
 	&__link {
 		color: $white;
 		text-decoration: none;
-		font-family: montserrat;
+		font-family: $titleFontStack;
 		font-weight: 500;
 
 		&_large {
@@ -31,7 +36,7 @@
 
 		&_highlight {
 			color: $blue;
-			font-family: "Fira Sans" sans-serif;
+			font-family: "Fira Sans", sans-serif;
 			font-weight: 700;
 		}
 	}
