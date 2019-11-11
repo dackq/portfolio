@@ -7,7 +7,7 @@
 		"dev": "run-p watch:code dev:server",
 		"dev:server": "lite-server -c .config/bs-config.json",
 		"predev": "npm run build",
-		"watch:code": "onchange \"./src/**/*\" -- npm run build",
+		"watch:code": "onchange \"./src/**/*\" -- npm run build:code",
 		"build": "run-p build:code",
 		"build:code": "webpack --config .config/webpack.config.js"
 	},
