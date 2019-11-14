@@ -1,8 +1,12 @@
 {
 	"name": "portfolio-css-rewrite",
 	"version": "1.0.0",
-	"description": "",
+	"description": "My portfolio website for software development.",
 	"main": "index.js",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/dackq/portfolio"
+	},
 	"scripts": {
 		"dev": "run-p watch:code dev:server",
 		"dev:server": "lite-server -c .config/bs-config.json",
@@ -16,6 +20,7 @@
 	"license": "ISC",
 	"devDependencies": {
 		"@babel/core": "^7.6.4",
+		"@fortawesome/fontawesome-free": "^5.11.2",
 		"autoprefixer": "^9.7.0",
 		"babel-loader": "^8.0.6",
 		"css-loader": "^3.2.0",
@@ -36,5 +41,7 @@
 		"webpack": "^4.41.2",
 		"webpack-cli": "^3.3.9"
 	},
-	"dependencies": {}
+	"dependencies": {
+		"lit-element": "^2.2.1"
+	}
 }
