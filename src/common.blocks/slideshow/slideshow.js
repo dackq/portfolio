@@ -5,20 +5,25 @@ import pomodoro from "../../img/pomodoro.png";
 class Slideshow extends LitElement {
 	static get properties() {
 		return {
-			slide1Status: { type: String },
-			slide2Status: { type: String },
-			slide3Status: { type: String },
-			slides: { type: Array }
+			slides: { type: Array },
+			currentSlide: { type: Number }
 		};
 	}
 
 	constructor() {
 		super();
+		this.currentSlide = 0;
 		this.slides = [
-			{ image: pomodoro, status: "carousel__slide_prev" },
-			{ image: pomodoro, status: "carousel__slide_initial" },
-			{ image: pomodoro, status: "carousel__slide_next" }
+			{ image: pomodoro, status: "" },
+			{ image: pomodoro, status: "" },
+			{ image: pomodoro, status: "" }
 		];
+	}
+
+	setInitialClasses(e) {
+		this.slides[this.slides.length - 1].status = "carousel__slide_prev";
+		this.slides[0].status = "carousel__slide_active";
+		this.slides[1].status = "carousel__slide_next";
 	}
 
 	static get styles() {
