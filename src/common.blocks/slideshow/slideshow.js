@@ -52,6 +52,14 @@ class Slideshow extends LitElement {
 		this.moveCarouselTo(this.currentSlide);
 	}
 
+	disableInteration() {
+		this.moving = true;
+
+		setTimeout(() => {
+			moving = false;
+		}, 500);
+	}
+
 	moveCarouselTo(slide) {}
 
 	static get styles() {
