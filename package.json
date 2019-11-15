@@ -49,6 +49,7 @@
 		"webpack-cli": "^3.3.9"
 	},
 	"dependencies": {
+		"@types/node": "^12.12.7",
 		"lit-element": "^2.2.1"
 	}
 }
