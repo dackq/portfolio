@@ -14,18 +14,20 @@ class Slideshow extends LitElement {
 	constructor() {
 		super();
 		this.currentSlide = 0;
-		this.mobing = true;
+		this.moving = false;
 		this.slides = [
-			{ image: pomodoro, status: "" },
-			{ image: pomodoro, status: "" },
-			{ image: pomodoro, status: "" }
+			{ image: pomodoro },
+			{ image: pomodoro },
+			{ image: pomodoro },
+			{ image: pomodoro }
 		];
+		this.setInitialClasses();
 	}
 
 	setInitialClasses() {
 		this.slides[this.slides.length - 1].status = "carousel__slide_prev";
-		this.slides[0].status = "carousel__slide_active";
-		this.slides[1].status = "carousel__slide_next";
+		this.slides[this.currentSlide].status = "carousel__slide_active";
+		this.slides[this.currentSlide + 1].status = "carousel__slide_next";
 	}
 
 	moveNext() {
@@ -56,11 +58,26 @@ class Slideshow extends LitElement {
 		this.moving = true;
 
 		setTimeout(() => {
-			moving = false;
+			this.moving = false;
 		}, 500);
 	}
 
-	moveCarouselTo(slide) {}
+	moveCarouselTo(slide) {
+		if (!this.moving) {
+			this.disableInteration();
+
+			let newPrevious =
+					slide - 1 < 0 ? this.slides.length - 1 : slide - 1,
+				newNext = slide + 1 > this.slides.length - 1 ? 0 : slide + 1;
+
+			for (let slide of this.slides) {
+				slide.status = "";
+			}
+			this.slides[slide].status = "carousel__slide_active";
+			this.slides[newPrevious].status = "carousel__slide_prev";
+			this.slides[newNext].status = "carousel__slide_next";
+		}
+	}
 
 	static get styles() {
 		return css`
@@ -101,7 +118,7 @@ class Slideshow extends LitElement {
 				transform: translateX(-100%);
 			}
 			.carousel__slide_next {
-				transform: translateY() (100%);
+				transform: translateX(100%);
 			}
 
 			.carousel__button_prev,
@@ -147,7 +164,7 @@ class Slideshow extends LitElement {
 		return html`
 			<div class="carousel">
 				<button
-					@click="${this.moveNext} "
+					@click="${this.movePrev} "
 					class="carousel__button_prev"
 				></button>
 				<div class="carousel__track">
@@ -161,13 +178,16 @@ class Slideshow extends LitElement {
 							`
 					)}
 				</div>
-				<button class="carousel__button_next"></button>
+				<button
+					@click="${this.moveNext}"
+					class="carousel__button_next"
+				></button>
 
-				<div class="carousel__nav">
+				<!-- <div class="carousel__nav">
 					<button class="carousel__indicator"></button>
 					<button class="carousel__indicator"></button>
 					<button class="carousel__indicator"></button>
-				</div>
+				</div> -->
 			</div>
 		`;
 	}
