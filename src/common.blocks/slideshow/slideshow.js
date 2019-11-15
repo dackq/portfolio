@@ -38,6 +38,16 @@ class Slideshow extends LitElement {
 		}
 	}
 
+	movePrev() {
+		if (!this.moving) {
+			if (this.currentSlide === 0) {
+				this.currentSlide = this.slides.length - 1;
+			} else {
+				this.currentSlide--;
+			}
+		}
+	}
+
 	static get styles() {
 		return css`
 			.carousel {
