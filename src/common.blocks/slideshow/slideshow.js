@@ -6,13 +6,15 @@ class Slideshow extends LitElement {
 	static get properties() {
 		return {
 			slides: { type: Array },
-			currentSlide: { type: Number }
+			currentSlide: { type: Number },
+			moving: { type: Boolean }
 		};
 	}
 
 	constructor() {
 		super();
 		this.currentSlide = 0;
+		this.mobing = true;
 		this.slides = [
 			{ image: pomodoro, status: "" },
 			{ image: pomodoro, status: "" },
@@ -20,10 +22,20 @@ class Slideshow extends LitElement {
 		];
 	}
 
-	setInitialClasses(e) {
+	setInitialClasses() {
 		this.slides[this.slides.length - 1].status = "carousel__slide_prev";
 		this.slides[0].status = "carousel__slide_active";
 		this.slides[1].status = "carousel__slide_next";
+	}
+
+	moveNext() {
+		if (!this.moving) {
+			if (this.currentSlide === this.slides.length - 1) {
+				this.currentSlide = 0;
+			} else {
+				this.currentSlide++;
+			}
+		}
 	}
 
 	static get styles() {
@@ -110,7 +122,10 @@ class Slideshow extends LitElement {
 	render() {
 		return html`
 			<div class="carousel">
-				<button class="carousel__button_prev"></button>
+				<button
+					@click="${this.moveNext} "
+					class="carousel__button_prev"
+				></button>
 				<div class="carousel__track">
 					${this.slides.map(
 						slide =>
