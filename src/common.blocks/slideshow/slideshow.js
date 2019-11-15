@@ -36,6 +36,8 @@ class Slideshow extends LitElement {
 				this.currentSlide++;
 			}
 		}
+
+		this.moveCarouselTo(this.currentSlide);
 	}
 
 	movePrev() {
@@ -46,7 +48,11 @@ class Slideshow extends LitElement {
 				this.currentSlide--;
 			}
 		}
+
+		this.moveCarouselTo(this.currentSlide);
 	}
+
+	moveCarouselTo(slide) {}
 
 	static get styles() {
 		return css`
