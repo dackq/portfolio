@@ -25,9 +25,18 @@ class Slideshow extends LitElement {
 	}
 
 	setInitialClasses() {
-		this.slides[this.slides.length - 1].status = "carousel__slide_prev";
+		this.slides.forEach(item => (item.status = ""));
+		this.slides[
+			this.currentSlide - 1 > 0
+				? this.currentSlide - 1
+				: this.slides.length - 1
+		].status = "carousel__slide_prev";
 		this.slides[this.currentSlide].status = "carousel__slide_active";
-		this.slides[this.currentSlide + 1].status = "carousel__slide_next";
+		this.slides[
+			this.currentSlide + 1 < this.slides.length - 1
+				? this.currentSlide + 1
+				: 0
+		].status = "carousel__slide_next";
 	}
 
 	moveNext() {
@@ -96,8 +105,9 @@ class Slideshow extends LitElement {
 				position: absolute;
 				display: block;
 				top: 0;
+				left: 50%;
+				transform: translateX(-50%);
 				width: 80%;
-				margin: auto;
 				z-index: 100;
 				transition: transform 0.5s, opacity 0.5s, z-index 0.5s;
 			}
@@ -106,6 +116,7 @@ class Slideshow extends LitElement {
 			.carousel__slide_active {
 				opacity: 1;
 				position: relative;
+				margin: 0;
 				z-index: 900;
 			}
 
