@@ -126,10 +126,10 @@ class Slideshow extends LitElement {
 			}
 
 			.carousel__slide_prev {
-				transform: translateX(-100%);
+				transform: translateX(-150%);
 			}
 			.carousel__slide_next {
-				transform: translateX(100%);
+				transform: translateX(50%);
 			}
 
 			.carousel__button_prev,
