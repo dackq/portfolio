@@ -107,9 +107,17 @@ class Slideshow extends LitElement {
 				top: 0;
 				left: 50%;
 				transform: translateX(-50%);
-				width: 80%;
+				width: 65%;
+				/* border-radius: 0.6rem; */ /* div is taller than image so the bottom berder looks weird. not sure how to make the div the same height as the image. */
 				z-index: 100;
 				transition: transform 0.5s, opacity 0.5s, z-index 0.5s;
+				overflow: hidden;
+			}
+
+			@media (min-width: 768px) {
+				.carousel__slide {
+					width: 35%;
+				}
 			}
 
 			.carousel__slide_initial,
@@ -131,11 +139,14 @@ class Slideshow extends LitElement {
 			.carousel__slide_next {
 				transform: translateX(50%);
 			}
+			.carousel__image {
+				width: 100%;
+			}
 
 			.carousel__button_prev,
 			.carousel__button_next {
 				position: absolute;
-				top: 50%;
+				top: 48%;
 				width: 3rem;
 				height: 3rem;
 				background-color: #fff;
@@ -182,10 +193,12 @@ class Slideshow extends LitElement {
 					${this.slides.map(
 						slide =>
 							html`
-								<img
-									src="${slide.image}"
-									class="carousel__slide ${slide.status}"
-								/>
+								<div class="carousel__slide ${slide.status}">
+									<img
+										class="carousel__image"
+										src="${slide.image}"
+									/>
+								</div>
 							`
 					)}
 				</div>
