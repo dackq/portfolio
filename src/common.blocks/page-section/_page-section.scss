@@ -7,7 +7,7 @@
 	}
 
 	&__content-block {
-		max-width: 64rem;
+		max-width: $contentWidth;
 		margin: 0rem auto;
 
 		p {
