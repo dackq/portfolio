@@ -188,6 +188,7 @@ class Slideshow extends LitElement {
 				<button
 					@click="${this.movePrev} "
 					class="carousel__button_prev"
+					type="button"
 				></button>
 				<div class="carousel__track">
 					${this.slides.map(
@@ -205,6 +206,7 @@ class Slideshow extends LitElement {
 				<button
 					@click="${this.moveNext}"
 					class="carousel__button_next"
+					type="button"
 				></button>
 
 				<!-- <div class="carousel__nav">
