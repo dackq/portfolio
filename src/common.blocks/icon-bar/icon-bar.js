@@ -24,7 +24,6 @@ for (let iconBar of document.querySelectorAll(".icon-bar")) {
 	iconBar
 		.querySelector(".icon-bar__icon_toggle")
 		.addEventListener("click", () => {
-			console.log(breakpoint.value);
 			if (
 				iconBar.querySelector(".icon-bar__content").dataset.open ===
 				"true"
