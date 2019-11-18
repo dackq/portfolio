@@ -1,11 +1,47 @@
-$width: 20rem;
+$width: 70vw;
+$height: calc(#{$width} / (1.618 * 3));
 
 .card {
 	box-shadow: 10px 10px 35px -8px $paleGray;
 	width: $width;
-	height: calc(#{$width} / 1.618);
+	max-width: 50rem;
+	height: $height;
 	// background: $paleGray;
 	// color: white;
-	margin: 0 auto;
-	border-radius: 1rem;
+	margin: 1rem auto;
+	border-radius: 0.5rem;
+	position: relative;
+	display: block;
+	overflow: hidden;
+
+	&__symbol {
+		font-size: 2rem;
+	}
+
+	&__section {
+		position: relative;
+		text-align: center;
+		height: $height;
+		&_gray {
+			background-color: $gray;
+			color: $white;
+		}
+		&_center {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translateY(-50%) translateX(-50%);
+		}
+	}
+
+	&__link {
+		text-decoration: none;
+		display: block;
+		color: $gray;
+		font-family: $titleFontStack;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
 }
