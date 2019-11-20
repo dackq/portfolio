@@ -1,6 +1,8 @@
 .header {
-	padding: 1px 0rem;
+	padding: 0.5rem 0rem;
 	background-color: $gray;
+	z-index: 2000;
+	width: 100%;
 
 	@include small-breakpoint {
 		padding-right: $largePageSidePadding;
