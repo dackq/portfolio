@@ -147,7 +147,8 @@ class Slideshow extends LitElement {
 				transform: translateX(20%);
 			}
 			.carousel__image {
-				width: 100%;
+				width: ${SlideWidth}rem;
+				height: ${SlideHeight}rem;
 			}
 
 			.carousel__button_prev,
