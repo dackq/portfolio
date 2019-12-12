@@ -20,6 +20,10 @@
 		font-family: $titleFontStack;
 		font-weight: 500;
 
+		&_reduce-margin {
+			margin: 0;
+		}
+
 		&_large {
 			font-size: 2rem;
 		}
