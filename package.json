@@ -13,7 +13,9 @@
 		"predev": "npm run build",
 		"watch:code": "onchange \"./src/**/*\" -- npm run build:code",
 		"build": "run-p build:code",
-		"build:code": "webpack --config .config/webpack.config.js"
+		"build:code": "webpack --config .config/webpack.config.js",
+		"prepublish": "npm run build",
+		"publish": "cd ../dist/ && git add . && git commit && git push dreamhost master"
 	},
 	"keywords": [],
 	"author": "",
