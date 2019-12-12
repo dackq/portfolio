@@ -8,10 +8,7 @@
 		"url": "https://github.com/dackq/portfolio"
 	},
 	"scripts": {
-		"dev": "run-p watch:code dev:server",
-		"dev:server": "lite-server -c .config/bs-config.json",
-		"predev": "npm run build",
-		"watch:code": "onchange \"./src/**/*\" -- npm run build:code",
+		"dev": "webpack-dev-server --config .config/webpack.config.js --mode development",
 		"build": "run-p build:code",
 		"build:code": "webpack --config .config/webpack.config.js",
 		"prepublish": "npm run build",
@@ -48,7 +45,8 @@
 		"ts-loader": "^6.2.1",
 		"typescript": "^3.7.2",
 		"webpack": "^4.41.2",
-		"webpack-cli": "^3.3.9"
+		"webpack-cli": "^3.3.9",
+		"webpack-dev-server": "^3.9.0"
 	},
 	"dependencies": {
 		"@types/node": "^12.12.7",
