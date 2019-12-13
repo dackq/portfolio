@@ -1,3 +1,8 @@
+.main-content {
+	min-height: calc(100vh - #{$footerHeight});
+	padding-bottom: 3.5rem;
+}
+
 .page-section {
 	padding: 3.5rem $pageSidePadding 0rem $pageSidePadding;
 

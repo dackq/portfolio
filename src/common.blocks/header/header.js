@@ -1,4 +1,5 @@
-window.onscroll = function() {
+const updateHeader = () => {
+	let heroBox = document.querySelector("#hero-box");
 	let scrollTop =
 			window.pageYOffset !== undefined
 				? window.pageYOffset
@@ -8,7 +9,7 @@ window.onscroll = function() {
 						document.body
 				  ).scrollTop,
 		header = document.querySelector(".header"),
-		heroHeight = document.querySelector("#hero-box").offsetHeight,
+		heroHeight = heroBox ? heroBox.offsetHeight : 0,
 		main = document.querySelector("#main-content");
 	if (scrollTop >= heroHeight) {
 		header.style.position = "fixed";
@@ -19,3 +20,7 @@ window.onscroll = function() {
 		main.style.paddingTop = "";
 	}
 };
+
+updateHeader();
+
+window.onscroll = updateHeader;

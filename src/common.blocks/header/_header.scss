@@ -3,6 +3,7 @@
 	background-color: $gray;
 	z-index: 2000;
 	width: 100%;
+	height: $headerHeight;
 
 	@include small-breakpoint {
 		padding-right: $largePageSidePadding;
