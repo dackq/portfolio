@@ -11,8 +11,8 @@
 		"dev": "webpack-dev-server --config .config/webpack.config.js --mode development",
 		"build": "run-p build:code",
 		"build:code": "webpack --config .config/webpack.config.js --mode production",
-		"prepublish": "npm run build",
-		"publish": "cd ../dist/ && git add . && git commit && git push dreamhost master"
+		"prepush": "npm run build",
+		"push": "cd ../dist/ && git add . && git commit && git push dreamhost master"
 	},
 	"keywords": [],
 	"author": "",
