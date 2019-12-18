@@ -3,6 +3,7 @@ import { LitElement, css, html } from "lit-element";
 import pomodoro from "../../img/pomodoro.png";
 import express from "../../img/expressjs.png";
 import portfolio from "../../img/portfolio.png";
+import rockPaperScissors from "../../img/rockpaperscissors.png";
 
 const SlideWidth = 20;
 const SlideHeight = SlideWidth / 1.618;
@@ -27,6 +28,14 @@ class Slideshow extends LitElement {
 				description:
 					"This is a node.js express server with authentication from passport and a mongoDB database.",
 				github: "https://github.com/dackq/express-code-challenge"
+			},
+			{
+				image: rockPaperScissors,
+				title: "Rock Paper Scissors",
+				description:
+					"Rock paper scissors game made with web-components through Polymer's lit-element library.",
+				github: "https://github.com/dackq/rock-paper-scissors",
+				link: "https://rockpaperscissors.dakotalreed.com"
 			},
 			{
 				image: pomodoro,
