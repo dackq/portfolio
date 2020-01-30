@@ -38,13 +38,6 @@ class Slideshow extends LitElement {
 				link: "https://rockpaperscissors.dakotalreed.com"
 			},
 			{
-				image: pomodoro,
-				title: "Pomodoro Timer",
-				description: "Custom web component pomodoro timer.",
-				github: "",
-				link: "https://www.pomodoro.dakotalreed.com"
-			},
-			{
 				image: portfolio,
 				title: "Portfolio",
 				description: "Github repository for this website.",
